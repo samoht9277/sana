@@ -64,21 +64,10 @@
         
     if (isEnabled) {
         %init (Tweak);
-        
-        if (wantsLabelHidden) {
-            %init (HUDLabel);
-        }
-
-        if (wantsGlyph) {
-            %init (HUDGlyph);
-        }
-        
-        if (wantsToChangeAxis) {
-            %init (HUDAxis);
-        }
-        
-        if (wantsToChangeWidth) {
-            %init (HUDWidth);
-        }
+    
+        if (wantsLabelHidden) %init (HUDLabel);
+        if (wantsGlyph) %init (HUDGlyph);
+        if (wantsToChangeAxis) %init (HUDAxis);
+        if (wantsToChangeWidth) %init (HUDWidth);
     }
 }
