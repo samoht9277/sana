@@ -1,0 +1,1 @@
+[ -f /var/mobile/Library/Preferences/com.samoht.sana.plist ] && rm -rf /var/mobile/Library/Preferences/com.samoht.sana.plist || echo "Deleting plist..."

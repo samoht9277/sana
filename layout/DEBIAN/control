@@ -1,0 +1,10 @@
+Package: com.samoht.sana
+Name: sana
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Change the way your volume HUD looks like.
+Maintainer: samoht
+Author: samoht <totobighouse@gmail.com>
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 13)
+icon: file:///Library/PreferenceBundles/sanaPrefs.bundle/icon@3x.png
