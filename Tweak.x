@@ -51,16 +51,16 @@
 %hook SBVolumeHUDSettings
 
 - (void)setLandscapeState2Width:(double)arg1 {
-        double w = (150);
-        return %orig(w);
+    double w = (width);
+    return %orig(w);
 }
 
 %end
 %end
 
 %ctor {
-    loadPrefs();
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.samoht.sana.changed"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+    loadPreferences();
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPreferences, CFSTR("com.samoht.sana.changed"), NULL, CFNotificationSuspensionBehaviorCoalesce);
         
     if (isEnabled) {
         %init (Tweak);

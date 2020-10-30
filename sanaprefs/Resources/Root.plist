@@ -54,19 +54,22 @@
             <key>key</key>
             <string>wantsLabelHidden</string>
             <key>label</key>
-            <string>Hide Label</string>
+            <string>Hide Sound Output Label</string>
             <key>PostNotification</key>
             <string>com.samoht.sana.changed</string>
         </dict>
         
+        <!-- Small Mini Width Cell -->
         <dict>
             <key>cell</key>
             <string>PSGroupCell</string>
             <key>label</key>
-            <string>misc</string>
+            <string>Mini HUD Width</string>
+            <key>footerText</key>
+            <string>Move the knob above to initialize.</string>
         </dict>
         
-        <!-- Smaller Width Cell -->
+        <!-- Small Mini Width Cell -->
         <dict>
             <key>cell</key>
             <string>PSSwitchCell</string>
@@ -83,17 +86,37 @@
             <key>key</key>
             <string>wantsToChangeWidth</string>
             <key>label</key>
-            <string>Small Slider Width</string>
+            <string>Enable Small Slider Width</string>
             <key>PostNotification</key>
             <string>com.samoht.sana.changed</string>
         </dict>
         
-        <!-- Empty Cell -->
+        <!-- Small Mini Width Slider -->
+        <dict>
+            <key>cell</key>
+            <string>PSSliderCell</string>
+            <key>default</key>
+            <integer>130</integer>
+            <key>defaults</key>
+            <string>com.samoht.sana</string>
+            <key>key</key>
+            <string>width</string>
+            <key>min</key>
+            <integer>50</integer>
+            <key>max</key>
+            <integer>200</integer>
+            <key>showValue</key>
+            <true/>
+            <key>isSegmented</key>
+            <false/>
+        </dict>
+        
+        <!--  Glyph -->
         <dict>
             <key>cell</key>
             <string>PSGroupCell</string>
             <key>label</key>
-            <string></string>
+            <string>Glyph</string>
         </dict>
         
         <!-- Glyph Size Cell -->
@@ -113,7 +136,7 @@
             <key>key</key>
             <string>wantsGlyph</string>
             <key>label</key>
-            <string>Glyph Size</string>
+            <string>Enable Glyph Size</string>
             <key>PostNotification</key>
             <string>com.samoht.sana.changed</string>
         </dict>
@@ -144,12 +167,12 @@
             <string>com.samoht.sana.changed</string>
         </dict>
         
-        <!-- Empty Cell -->
+        <!-- Y Axis Cell -->
         <dict>
             <key>cell</key>
             <string>PSGroupCell</string>
             <key>label</key>
-            <string></string>
+            <string>Y axis</string>
         </dict>
         
         <!-- Y Axis Cell -->
@@ -169,7 +192,7 @@
             <key>key</key>
             <string>wantsToChangeAxis</string>
             <key>label</key>
-            <string>Change Y Axis</string>
+            <string>Enable Y Axis</string>
             <key>PostNotification</key>
             <string>com.samoht.sana.changed</string>
         </dict>

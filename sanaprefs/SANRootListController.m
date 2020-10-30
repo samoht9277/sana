@@ -79,7 +79,7 @@
 
 // Links
 - (void)sourceLink {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/samoht9277/Public-Tweaks/tree/master/sana"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/samoht9277/sana"] options:@{} completionHandler:nil];
     AudioServicesPlaySystemSound(1519);
 }
 
@@ -136,7 +136,6 @@
     if ([didShowAlert isEqual:@0]) {
         [self showAlert];
     }
-    
  }
 
 - (void)showAlert {
@@ -144,18 +143,17 @@
     NSMutableDictionary *settings = [NSMutableDictionary dictionary];
     [settings addEntriesFromDictionary:[NSDictionary dictionaryWithContentsOfFile:path]];
     
-    // Alert for people with notch.
-    UIAlertController *confirmAlert = [UIAlertController alertControllerWithTitle:@"Sana"
-    message:@"Sana does not fully support notched devices.\n \n Feel free to try it if you want.\n \n (This will only show once)"
+    UIAlertController *confirmAlert = [UIAlertController alertControllerWithTitle:@"Sana 1.1 Update"
+    message:@"\nWider Y axis range! \n\nSlider for mini HUD state width. \n\nCleaner settings and code."
     preferredStyle:UIAlertControllerStyleAlert];
 
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Enjoy!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
     [confirmAlert addAction:confirmAction];
 
     [self presentViewController:confirmAlert animated:YES completion:nil];
+    
     [settings setObject:@1 forKey:@"didShowAlert"];
     [settings writeToFile:path atomically:YES];
-    
 }
 
 @end
