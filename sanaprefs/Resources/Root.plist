@@ -187,7 +187,7 @@
             <key>min</key>
             <integer>0</integer>
             <key>max</key>
-            <integer>40</integer>
+            <integer>100</integer>
             <key>showValue</key>
             <true/>
             <key>isSegmented</key>
