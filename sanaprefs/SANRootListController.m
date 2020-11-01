@@ -35,7 +35,6 @@
 @end
 
 @implementation SANRootListController
-
 - (id)readPreferenceValue:(PSSpecifier*)specifier {
     NSString *path = [NSString stringWithFormat:@"/User/Library/Preferences/%@.plist", specifier.properties[@"defaults"]];
     NSMutableDictionary *settings = [NSMutableDictionary dictionary];
@@ -98,7 +97,7 @@
 }
 
 - (void)respringPrompt {
-    AudioServicesPlaySystemSound(1520);
+    AudioServicesPlaySystemSound(1519);
     
     // UIAlertController that shows when the Apply button is hit.
     UIAlertController *respringAlert = [UIAlertController alertControllerWithTitle:@"Sana"
@@ -155,5 +154,4 @@
     [settings setObject:@1 forKey:@"didShowAlert"];
     [settings writeToFile:path atomically:YES];
 }
-
 @end

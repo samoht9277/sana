@@ -1,6 +1,6 @@
 Package: com.samoht.sana
 Name: sana
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Description: Change the way your volume HUD looks like.
 Maintainer: samoht

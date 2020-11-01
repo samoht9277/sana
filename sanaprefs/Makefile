@@ -4,7 +4,7 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = sanaPrefs
 
-sanaPrefs_FILES = SANRootListController.m SANSubtitleCell.m SANRootHeaderView.mm
+sanaPrefs_FILES = SANRootListController.m SANSubtitleCell.m SANRootHeaderView.m
 sanaPrefs_FRAMEWORKS = UIKit
 sanaPrefs_PRIVATE_FRAMEWORKS = Preferences
 sanaPrefs_INSTALL_PATH = /Library/PreferenceBundles
