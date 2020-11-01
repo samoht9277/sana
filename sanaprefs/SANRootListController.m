@@ -14,24 +14,23 @@
   UIColor *_switchColor;
 }
 
-  - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)identifier specifier:(PSSpecifier *)specifier {
-    self = [super initWithStyle:style reuseIdentifier:identifier specifier:specifier];
+    - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)identifier specifier:(PSSpecifier *)specifier {
+        self = [super initWithStyle:style reuseIdentifier:identifier specifier:specifier];
 
-    if (self) {
-      ((UISwitch *)self.control).onTintColor = [self colorFromHex:[specifier propertyForKey:@"switchColor"] withAlpha:[[specifier propertyForKey:@"switchColorAlpha"] floatValue]];
+        if (self) {
+            ((UISwitch *)self.control).onTintColor = [self colorFromHex:[specifier propertyForKey:@"switchColor"] withAlpha:[[specifier propertyForKey:@"switchColorAlpha"] floatValue]];
+        }
+        return self;
     }
 
-    return self;
-  }
+    - (UIColor *)colorFromHex:(NSString *)hex withAlpha:(CGFloat)alpha {
+        unsigned rgbValue = 0;
+        NSScanner *scanner = [NSScanner scannerWithString:hex];
+        [scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"#"]];
+        [scanner scanHexInt:&rgbValue];
 
-  - (UIColor *)colorFromHex:(NSString *)hex withAlpha:(CGFloat)alpha {
-    unsigned rgbValue = 0;
-    NSScanner *scanner = [NSScanner scannerWithString:hex];
-    [scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"#"]];
-    [scanner scanHexInt:&rgbValue];
-
-    return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0x00FF00) >> 8)) / 255.0 blue:((float)((rgbValue & 0x0000FF) >> 0)) / 255.0 alpha:alpha];
-  }
+        return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0x00FF00) >> 8)) / 255.0 blue:((float)((rgbValue & 0x0000FF) >> 0)) / 255.0 alpha:alpha];
+    }
 @end
 
 @implementation SANRootListController

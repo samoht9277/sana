@@ -3,7 +3,7 @@
 
 @implementation SANRootHeaderView
 - (instancetype)initWithSpecifier:(PSSpecifier*)specifier {
-	self = [super init];
+    self = [super init];
 
 	UIImage* headerImage = [UIImage imageNamed:@"banner" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
 	_aspectRatio = headerImage.size.width / headerImage.size.height;
